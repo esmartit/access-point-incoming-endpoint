@@ -7,6 +7,6 @@ import org.springframework.boot.runApplication
 class AccessPointIncomingEndpointApplication
 
 fun main(args: Array<String>) {
-    println("hello")
+    println("hello test")
     runApplication<AccessPointIncomingEndpointApplication>(*args)
 }
