@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.0.3](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.0.2...v1.0.3) (2020-03-17)
+
+
+### Bug Fixes
+
+* testing ci cd deploy ([6091ac6](https://github.com/esmartit/access-point-incoming-endpoint/commit/6091ac69c20d48ea52c2b45930912a2207e4befb))
+
 ## [1.0.2](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.0.1...v1.0.2) (2020-03-17)
 
 
