@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "accesspoint-in-endpoint.fullname" . }}
+  name: {{ include "access-point-incoming-endpoint.fullname" . }}
   labels:
-    {{- include "accesspoint-in-endpoint.labels" . | nindent 4 }}
+    {{- include "access-point-incoming-endpoint.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,4 +12,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "accesspoint-in-endpoint.selectorLabels" . | nindent 4 }}
+    {{- include "access-point-incoming-endpoint.selectorLabels" . | nindent 4 }}

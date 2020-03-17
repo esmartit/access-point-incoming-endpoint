@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "accesspoint-in-endpoint.fullname" . }}
+  name: {{ include "access-point-incoming-endpoint.fullname" . }}
   labels:
-    {{- include "accesspoint-in-endpoint.labels" . | nindent 4 }}
+    {{- include "access-point-incoming-endpoint.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "accesspoint-in-endpoint.selectorLabels" . | nindent 6 }}
+      {{- include "access-point-incoming-endpoint.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "accesspoint-in-endpoint.selectorLabels" . | nindent 8 }}
+        {{- include "access-point-incoming-endpoint.selectorLabels" . | nindent 8 }}
     spec:
     {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
     {{- end }}
-      serviceAccountName: {{ include "accesspoint-in-endpoint.serviceAccountName" . }}
+      serviceAccountName: {{ include "access-point-incoming-endpoint.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
