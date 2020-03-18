@@ -19,18 +19,18 @@ import reactor.core.publisher.Mono
 import reactor.core.scheduler.Schedulers
 
 @RestController
-@RequestMapping(value = ["/devices"])
+@RequestMapping(value = ["/meraki"])
 class MerakiEndpoint(private val producer: EventProducer) {
 
     @Value("\${app.meraki.secret}")
     private lateinit var merakiSecretCheck: String
 
-    @GetMapping("secret-check")
+    @GetMapping("/devices")
     fun merakiSecretCheck():ResponseEntity<String>{
         return ResponseEntity.ok().body(merakiSecretCheck)
     }
 
-    @PostMapping(value = ["/seen"])
+    @PostMapping(value = ["/devices"])
     fun sendMessageToKafkaTopic(@RequestBody payload: Mono<MerakiPayload>): Mono<ResponseEntity<String>> {
 
         return payload
