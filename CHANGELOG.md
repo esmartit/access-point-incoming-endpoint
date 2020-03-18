@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.1.0](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.0.6...v1.1.0) (2020-03-18)
+
+
+### Features
+
+* adding kafka integration and meraki endpoint ([c7e85a5](https://github.com/esmartit/access-point-incoming-endpoint/commit/c7e85a5c8a48abcc72fe460e03486c1947f1acb9))
+
 ## [1.0.6](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.0.5...v1.0.6) (2020-03-17)
 
 
