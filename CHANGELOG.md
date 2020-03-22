@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.1.5](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.1.4...v1.1.5) (2020-03-22)
+
+
+### Bug Fixes
+
+* test build ([#4](https://github.com/esmartit/access-point-incoming-endpoint/issues/4)) ([d0e17f1](https://github.com/esmartit/access-point-incoming-endpoint/commit/d0e17f1e1059ac15db57072d80f1b9722a1649ab))
+
 ## [1.1.4](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.1.3...v1.1.4) (2020-03-22)
 
 
