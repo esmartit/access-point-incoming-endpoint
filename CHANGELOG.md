@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.1.3](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.1.2...v1.1.3) (2020-03-22)
+
+
+### Bug Fixes
+
+* cleaning dockerFile ([#1](https://github.com/esmartit/access-point-incoming-endpoint/issues/1)) ([7d5ac86](https://github.com/esmartit/access-point-incoming-endpoint/commit/7d5ac869d28b2841ad9766d0022e19a09cbcb626))
+
 ## [1.1.2](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.1.1...v1.1.2) (2020-03-18)
 
 
