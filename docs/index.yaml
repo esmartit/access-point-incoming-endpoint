@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  access-point-incoming-endpoint:
+  - apiVersion: v2
+    appVersion: 1.1.6
+    created: "2020-03-22T22:17:42.606733885Z"
+    description: A Helm chart for Kubernetes
+    digest: 19acdca2b3cd04644b019ea4cf2423299968fe138644a3e575bbb3fe19e1e8ae
+    name: access-point-incoming-endpoint
+    type: application
+    urls:
+    - https://esmartit.github.io/access-point-incoming-endpoint/docs/access-point-incoming-endpoint-1.1.6.tgz
+    version: 1.1.6
+generated: "2020-03-22T22:17:42.605907074Z"
