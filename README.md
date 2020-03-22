@@ -1,3 +1,3 @@
 # access-point-incoming-endpoint
 
-new release 1
+new release 2
