@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.2.0](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.1.6...v1.2.0) (2020-04-30)
+
+
+### Features
+
+* producing to fixed topic device presence ([#6](https://github.com/esmartit/access-point-incoming-endpoint/issues/6)) ([1875a2a](https://github.com/esmartit/access-point-incoming-endpoint/commit/1875a2a093810e34d44be81c2758002ce9821ce9))
+
 ## [1.1.6](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.1.5...v1.1.6) (2020-03-22)
 
 
