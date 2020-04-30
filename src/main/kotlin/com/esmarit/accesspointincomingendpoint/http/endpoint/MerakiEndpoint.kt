@@ -26,7 +26,7 @@ class MerakiEndpoint(private val producer: EventProducer) {
     private lateinit var merakiSecretCheck: String
 
     @GetMapping("/devices")
-    fun merakiSecretCheck():ResponseEntity<String>{
+    fun merakiSecretCheck(): ResponseEntity<String> {
         return ResponseEntity.ok().body(merakiSecretCheck)
     }
 
@@ -40,7 +40,7 @@ class MerakiEndpoint(private val producer: EventProducer) {
             .runOn(Schedulers.parallel())
             .doOnNext { producer.process(it) }
             .sequential()
-            .reduce(ResponseEntity.accepted().build<String>(), { t, k -> t })
+            .reduce(ResponseEntity.accepted().build(), { t, _ -> t })
     }
 
     private fun mapToDeviceSeenEvents(incomingData: Data): List<DeviceSeenEvent> {
@@ -79,7 +79,7 @@ fun Observation.toDeviceSeen() =
         location.toDeviceLocation(),
         manufacturer,
         os,
-        rssi,
+        rssi - 95,
         seenEpoch,
         seenTime,
         ssid
