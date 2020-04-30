@@ -30,8 +30,6 @@ spec:
           env:
             - name: "KAFKA_BROKER_HOST"
               value: {{ .Values.app.kafka.host }}
-            - name: "KAFKA_TOPIC"
-              value: {{ .Values.app.kafka.topic }}
             - name: "MERAKI_SECRET"
               value: {{ .Values.app.meraki.secret }}
           ports:
