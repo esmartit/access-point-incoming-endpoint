@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.2.3](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.2.2...v1.2.3) (2020-04-30)
+
+
+### Bug Fixes
+
+* enabling ingress ([#10](https://github.com/esmartit/access-point-incoming-endpoint/issues/10)) ([df9cde5](https://github.com/esmartit/access-point-incoming-endpoint/commit/df9cde58805dc8960dd97c84ac9ace2a52592a75))
+
 ## [1.2.2](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.2.1...v1.2.2) (2020-04-30)
 
 
