@@ -32,7 +32,7 @@ securityContext: {}
 
 app:
   kafka:
-    host: "test-kafka.default.svc.cluster.local:9092"
+    host: "event-bus-kafka:9092"
   meraki:
     secret: "adada123456789"
 
@@ -52,7 +52,7 @@ ingress:
   hosts:
     - host: tech.cluster.smartpoke.es
       paths:
-        - /test-ap(/|$)(.*)
+        - /demos-access-point(/|$)(.*)
   tls:
     - hosts:
         - tech.cluster.smartpoke.es

@@ -5,6 +5,7 @@ plugins {
 	id("io.spring.dependency-management") version "1.0.9.RELEASE"
 	kotlin("jvm") version "1.3.61"
 	kotlin("plugin.spring") version "1.3.61"
+	`maven-publish`
 }
 
 group = "com.esmarit"
@@ -19,7 +20,19 @@ configurations {
 }
 
 repositories {
+	mavenLocal()
 	mavenCentral()
+}
+
+publishing {
+	publications {
+		create<MavenPublication>("bootJava") {
+			artifact(tasks.getByName("bootJar"))
+		}
+	}
+	repositories {
+		mavenLocal()
+	}
 }
 
 extra["springCloudVersion"] = "Hoxton.SR3"
