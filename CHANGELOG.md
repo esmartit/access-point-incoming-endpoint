@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.2.4](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.2.3...v1.2.4) (2020-05-14)
+
+
+### Bug Fixes
+
+* adding helm icon ([#11](https://github.com/esmartit/access-point-incoming-endpoint/issues/11)) ([c4c63b1](https://github.com/esmartit/access-point-incoming-endpoint/commit/c4c63b18a8bb0e1e0a29a10ec2167fb759e38ac7))
+
 ## [1.2.3](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.2.2...v1.2.3) (2020-04-30)
 
 
