@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.3.0](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.2.4...v1.3.0) (2020-05-16)
+
+
+### Features
+
+* adding sensor settings endpoint ([#12](https://github.com/esmartit/access-point-incoming-endpoint/issues/12)) ([6285b76](https://github.com/esmartit/access-point-incoming-endpoint/commit/6285b761f9b8406aebf5189352d09eeb8e1bffab))
+
 ## [1.2.4](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.2.3...v1.2.4) (2020-05-14)
 
 
