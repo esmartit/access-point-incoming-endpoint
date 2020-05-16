@@ -10,5 +10,7 @@ spring.cloud.stream:
   bindings:
     output:
       destination: "smartpoke-device-presence"
+    sensor-settings-output:
+      destination: "smartpoke-sensor-settings"
 
 app.meraki.secret: "${MERAKI_SECRET:abcd}"
