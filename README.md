@@ -1,3 +1,3 @@
 # access-point-incoming-endpoint
 
-test build 2
+test build 3
