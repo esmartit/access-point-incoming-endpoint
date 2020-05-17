@@ -3,6 +3,8 @@ spring.cloud.stream:
   kafka:
     binder:
       brokers: "${KAFKA_BROKER_HOST}"
+      auto-add-partitions: false
+      auto-create-topics: false
       producer-properties:
         acks: "all"
         retries: 3
