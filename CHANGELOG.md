@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.5.2](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.5.1...v1.5.2) (2020-05-17)
+
+
+### Bug Fixes
+
+* fixing k8s delay liveness and readiness ([#16](https://github.com/esmartit/access-point-incoming-endpoint/issues/16)) ([add55c7](https://github.com/esmartit/access-point-incoming-endpoint/commit/add55c750fad6e6aba324df4b8e9281022b6ebb8))
+
 ## [1.5.1](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.5.0...v1.5.1) (2020-05-17)
 
 
