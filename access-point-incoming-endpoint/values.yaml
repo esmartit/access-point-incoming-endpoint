@@ -52,7 +52,7 @@ ingress:
   hosts:
     - host: tech.cluster.smartpoke.es
       paths:
-        - /demos-access-point(/|$)(.*)
+        - /test-ap(/|$)(.*)
   tls:
     - hosts:
         - tech.cluster.smartpoke.es
