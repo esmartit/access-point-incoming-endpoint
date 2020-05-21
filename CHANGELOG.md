@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.7.0](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.6.0...v1.7.0) (2020-05-21)
+
+
+### Features
+
+* adding proemtheus metrics ([#18](https://github.com/esmartit/access-point-incoming-endpoint/issues/18)) ([3239a27](https://github.com/esmartit/access-point-incoming-endpoint/commit/3239a27fc86ff5f79d9e34b7524b72c6d22debb3))
+
 # [1.6.0](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.5.2...v1.6.0) (2020-05-21)
 
 
