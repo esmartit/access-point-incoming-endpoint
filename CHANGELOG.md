@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.7.3](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.7.2...v1.7.3) (2020-05-21)
+
+
+### Bug Fixes
+
+* missing dependency ([#21](https://github.com/esmartit/access-point-incoming-endpoint/issues/21)) ([4e10482](https://github.com/esmartit/access-point-incoming-endpoint/commit/4e104828aa0af5ad9c4a80992bacb3283c41981c))
+
 ## [1.7.2](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.7.1...v1.7.2) (2020-05-21)
 
 
