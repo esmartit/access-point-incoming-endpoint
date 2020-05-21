@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.6.0](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.5.2...v1.6.0) (2020-05-21)
+
+
+### Features
+
+* removing k8s resource limits ([#17](https://github.com/esmartit/access-point-incoming-endpoint/issues/17)) ([047ac4a](https://github.com/esmartit/access-point-incoming-endpoint/commit/047ac4ad5f8fec06f4bf4db6fc147cf8cdf77bec))
+
 ## [1.5.2](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.5.1...v1.5.2) (2020-05-17)
 
 
