@@ -2,8 +2,19 @@ apiVersion: v1
 entries:
   access-point-incoming-endpoint:
   - apiVersion: v2
+    appVersion: 1.6.0
+    created: "2020-05-21T09:42:40.579448968Z"
+    description: Endpoint for Meraki access points
+    digest: 4f70e240fa1f2ed757c4b1603998eb08963f47cdb3bd642c1f9c08234e923dc8
+    icon: https://esmartit.github.io/seen-devices-data-store/docs/smartpoke.png
+    name: access-point-incoming-endpoint
+    type: application
+    urls:
+    - https://esmartit.github.io/access-point-incoming-endpoint/docs/access-point-incoming-endpoint-1.6.0.tgz
+    version: 1.6.0
+  - apiVersion: v2
     appVersion: 1.5.2
-    created: "2020-05-17T07:41:53.049015508Z"
+    created: "2020-05-21T09:42:40.578698523Z"
     description: Endpoint for Meraki access points
     digest: 213d11b3d8fc3187b780888cb30d8c6bdbabd188b27d6a7cbe60ab6d2234c4af
     icon: https://esmartit.github.io/seen-devices-data-store/docs/smartpoke.png
@@ -14,7 +25,7 @@ entries:
     version: 1.5.2
   - apiVersion: v2
     appVersion: 1.5.1
-    created: "2020-05-17T07:41:53.048356583Z"
+    created: "2020-05-21T09:42:40.577920438Z"
     description: Endpoint for Meraki access points
     digest: 24253eeac039d8fe3d69797172d6227914ef47b1b5897964d4b73e4a0270cbc8
     icon: https://esmartit.github.io/seen-devices-data-store/docs/smartpoke.png
@@ -25,7 +36,7 @@ entries:
     version: 1.5.1
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2020-05-17T07:41:53.04755266Z"
+    created: "2020-05-21T09:42:40.577081621Z"
     description: Endpoint for Meraki access points
     digest: 1b9e2907af801a91d82170de26e14aa201eae20868d9042be6b8b2184c256ba6
     icon: https://esmartit.github.io/seen-devices-data-store/docs/smartpoke.png
@@ -36,7 +47,7 @@ entries:
     version: 1.5.0
   - apiVersion: v2
     appVersion: 1.3.0
-    created: "2020-05-17T07:41:53.040349095Z"
+    created: "2020-05-21T09:42:40.576281673Z"
     description: Endpoint for Meraki access points
     digest: deb93b9086b5ec041f811efb21d575c2e95e33bb56bda380a79a3f269dd38b14
     icon: https://esmartit.github.io/seen-devices-data-store/docs/smartpoke.png
@@ -47,7 +58,7 @@ entries:
     version: 1.3.0
   - apiVersion: v2
     appVersion: 1.2.4
-    created: "2020-05-17T07:41:53.039441556Z"
+    created: "2020-05-21T09:42:40.575389822Z"
     description: Endpoint for Meraki access points
     digest: 3aadf48b152f2f0a0bc1432c4321efc63da32eea6a42a1827074bd32c4982e7c
     icon: https://esmartit.github.io/seen-devices-data-store/docs/smartpoke.png
@@ -58,7 +69,7 @@ entries:
     version: 1.2.4
   - apiVersion: v2
     appVersion: 1.2.3
-    created: "2020-05-17T07:41:53.03855204Z"
+    created: "2020-05-21T09:42:40.574498441Z"
     description: A Helm chart for Kubernetes
     digest: 1d6ea536a76a1d1d47818def4b36e75c705cd155ebd6a47a018ed5345f211ee0
     name: access-point-incoming-endpoint
@@ -68,7 +79,7 @@ entries:
     version: 1.2.3
   - apiVersion: v2
     appVersion: 1.2.2
-    created: "2020-05-17T07:41:53.037605246Z"
+    created: "2020-05-21T09:42:40.57131441Z"
     description: A Helm chart for Kubernetes
     digest: 6671ed49bf58d4c67295859af72ae1b7e37244275079b4fdb530d795d9aaca8d
     name: access-point-incoming-endpoint
@@ -78,7 +89,7 @@ entries:
     version: 1.2.2
   - apiVersion: v2
     appVersion: 1.2.1
-    created: "2020-05-17T07:41:53.036625651Z"
+    created: "2020-05-21T09:42:40.564522923Z"
     description: A Helm chart for Kubernetes
     digest: 66ccc1e44e4f1bbeb3d97b2d14563930a7e2d77c9f061423cf1091051353d952
     name: access-point-incoming-endpoint
@@ -88,7 +99,7 @@ entries:
     version: 1.2.1
   - apiVersion: v2
     appVersion: 1.2.0
-    created: "2020-05-17T07:41:53.0356951Z"
+    created: "2020-05-21T09:42:40.563804714Z"
     description: A Helm chart for Kubernetes
     digest: d97cdf52663be77357f471492f1d001d1c1ec6422b1c6270b44b5a6046b66fdc
     name: access-point-incoming-endpoint
@@ -98,7 +109,7 @@ entries:
     version: 1.2.0
   - apiVersion: v2
     appVersion: 1.1.6
-    created: "2020-05-17T07:41:53.034699362Z"
+    created: "2020-05-21T09:42:40.562308711Z"
     description: A Helm chart for Kubernetes
     digest: 19acdca2b3cd04644b019ea4cf2423299968fe138644a3e575bbb3fe19e1e8ae
     name: access-point-incoming-endpoint
@@ -106,4 +117,4 @@ entries:
     urls:
     - https://esmartit.github.io/access-point-incoming-endpoint/docs/access-point-incoming-endpoint-1.1.6.tgz
     version: 1.1.6
-generated: "2020-05-17T07:41:53.006707075Z"
+generated: "2020-05-21T09:42:40.560468493Z"
