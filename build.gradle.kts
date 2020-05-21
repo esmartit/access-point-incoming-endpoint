@@ -28,6 +28,7 @@ dependencies {
 	implementation("org.springframework.cloud:spring-cloud-stream")
 	implementation("org.springframework.cloud:spring-cloud-stream-binder-kafka")
 	implementation("org.springframework.kafka:spring-kafka")
+	runtimeOnly("io.micrometer:micrometer-registry-prometheus")
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
