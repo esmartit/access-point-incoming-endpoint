@@ -12,7 +12,7 @@ class MetricsConfig {
     @Bean
     fun metricsCommonTags(): MeterRegistryCustomizer<MeterRegistry> {
         return MeterRegistryCustomizer { registry: MeterRegistry ->
-            registry.config().commonTags("application", "seen-devices-data-store")
+            registry.config().commonTags("application", "access-point-incoming-endpoint")
         }
     }
 }
