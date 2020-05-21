@@ -11,6 +11,10 @@ spec:
       {{- include "access-point-incoming-endpoint.selectorLabels" . | nindent 6 }}
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/path: /actuator/prometheus
+        prometheus.io/port:  "9000"
       labels:
         {{- include "access-point-incoming-endpoint.selectorLabels" . | nindent 8 }}
     spec:
@@ -37,14 +41,12 @@ spec:
               containerPort: {{ .Values.service.targetPort }}
               protocol: TCP
           livenessProbe:
-            initialDelaySeconds: 120
             httpGet:
-              path: /actuator/health
+              path: /actuator/health/liveness
               port: http
           readinessProbe:
-            initialDelaySeconds: 120
             httpGet:
-              path: /actuator/health
+              path: /actuator/health/readiness
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
