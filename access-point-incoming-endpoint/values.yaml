@@ -58,13 +58,13 @@ ingress:
         - tech.cluster.smartpoke.es
       secretName: wildcard-cluster-smartpoke-tls
 
-resources:
-   limits:
-     cpu: 800m
-     memory: 1024Mi
-   requests:
-     cpu: 200m
-     memory: 1024Mi
+#resources:
+#   limits:
+#     cpu: 800m
+#     memory: 1024Mi
+#   requests:
+#     cpu: 200m
+#     memory: 1024Mi
 
 nodeSelector: {}
 
