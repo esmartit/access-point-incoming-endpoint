@@ -16,3 +16,12 @@ spring.cloud.stream:
       destination: "smartpoke-sensor-settings"
 
 app.meraki.secret: "${MERAKI_SECRET:abcd}"
+
+management:
+  health:
+    probes:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: metrics, health, prometheus
