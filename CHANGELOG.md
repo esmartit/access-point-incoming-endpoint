@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.8.0](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.7.3...v1.8.0) (2020-07-14)
+
+
+### Features
+
+* country location ([#22](https://github.com/esmartit/access-point-incoming-endpoint/issues/22)) ([0987b38](https://github.com/esmartit/access-point-incoming-endpoint/commit/0987b385a7e81118643b41efbd69422360e8a50d))
+
 ## [1.7.3](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.7.2...v1.7.3) (2020-05-21)
 
 
