@@ -4,6 +4,7 @@ import com.esmarit.accesspointincomingendpoint.http.request.Data
 import com.esmarit.accesspointincomingendpoint.http.request.Location
 import com.esmarit.accesspointincomingendpoint.http.request.MerakiPayload
 import com.esmarit.accesspointincomingendpoint.http.request.Observation
+import com.esmarit.accesspointincomingendpoint.producer.CountryLocation
 import com.esmarit.accesspointincomingendpoint.producer.DeviceLocation
 import com.esmarit.accesspointincomingendpoint.producer.DeviceSeen
 import com.esmarit.accesspointincomingendpoint.producer.DeviceSeenEvent
@@ -56,16 +57,21 @@ class MerakiEndpoint(private val producer: EventProducer) {
         val apMac = incomingData.apMac
         val apFloors = incomingData.apFloors
 
+        val countryId = tags["t_country"] as String
+        val stateId = tags["t_state"] as String
+        val cityId = tags["t_city"] as String
+
         return incomingData.observations.map { it.toDeviceSeen() }
             .map {
                 DeviceSeenEvent(
-                    apMac,
-                    groupName,
-                    hotSpot,
-                    sensorName,
-                    spotId,
-                    it,
-                    apFloors
+                    apMac = apMac,
+                    groupName = groupName,
+                    hotSpot = hotSpot,
+                    sensorName = sensorName,
+                    spotId = spotId,
+                    device = it,
+                    apFloors = apFloors,
+                    countryLocation = CountryLocation(countryId, stateId, cityId)
                 )
             }
     }
