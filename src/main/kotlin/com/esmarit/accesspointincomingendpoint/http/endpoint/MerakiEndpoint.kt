@@ -60,6 +60,7 @@ class MerakiEndpoint(private val producer: EventProducer) {
         val countryId = tags["t_country"] as String
         val stateId = tags["t_state"] as String
         val cityId = tags["t_city"] as String
+        val zipCode = tags["t_zipcode"] as String
 
         return incomingData.observations.map { it.toDeviceSeen() }
             .map {
@@ -71,7 +72,7 @@ class MerakiEndpoint(private val producer: EventProducer) {
                     spotId = spotId,
                     device = it,
                     apFloors = apFloors,
-                    countryLocation = CountryLocation(countryId, stateId, cityId)
+                    countryLocation = CountryLocation(countryId, stateId, cityId, zipCode)
                 )
             }
     }
