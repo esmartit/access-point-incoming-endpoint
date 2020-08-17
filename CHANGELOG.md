@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.8.1](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.8.0...v1.8.1) (2020-08-17)
+
+
+### Bug Fixes
+
+* adding zipcode ([#23](https://github.com/esmartit/access-point-incoming-endpoint/issues/23)) ([359f602](https://github.com/esmartit/access-point-incoming-endpoint/commit/359f60230dc22488a676d19cb5847f73a9ade5a9))
+
 # [1.8.0](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.7.3...v1.8.0) (2020-07-14)
 
 
