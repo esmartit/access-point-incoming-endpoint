@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.8.2](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.8.1...v1.8.2) (2020-08-24)
+
+
+### Bug Fixes
+
+* adding log to device with position when sending ([#24](https://github.com/esmartit/access-point-incoming-endpoint/issues/24)) ([f6e90b2](https://github.com/esmartit/access-point-incoming-endpoint/commit/f6e90b20b34649a2ee8fee087c10cbf8d4c7453d))
+
 ## [1.8.1](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.8.0...v1.8.1) (2020-08-17)
 
 
