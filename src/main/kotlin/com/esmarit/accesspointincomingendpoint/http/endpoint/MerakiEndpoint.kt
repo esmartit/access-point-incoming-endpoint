@@ -9,6 +9,7 @@ import com.esmarit.accesspointincomingendpoint.producer.DeviceLocation
 import com.esmarit.accesspointincomingendpoint.producer.DeviceSeen
 import com.esmarit.accesspointincomingendpoint.producer.DeviceSeenEvent
 import com.esmarit.accesspointincomingendpoint.producer.EventProducer
+import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
@@ -23,6 +24,8 @@ import reactor.core.scheduler.Schedulers
 @RequestMapping(value = ["/meraki"])
 class MerakiEndpoint(private val producer: EventProducer) {
 
+    private val logger = LoggerFactory.getLogger(MerakiEndpoint::class.java)
+
     @Value("\${app.meraki.secret}")
     private lateinit var merakiSecretCheck: String
 
@@ -33,8 +36,10 @@ class MerakiEndpoint(private val producer: EventProducer) {
 
     @PostMapping(value = ["/devices"])
     fun sendMessageToKafkaTopic(@RequestBody payload: Mono<MerakiPayload>): Mono<ResponseEntity<String>> {
-
         return payload
+            .doOnNext {
+                logger.info("received payload: $it")
+            }
             .map { it.data }
             .flatMapIterable { mapToDeviceSeenEvents(it) }
             .parallel()
