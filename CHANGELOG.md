@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.8.3](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.8.2...v1.8.3) (2020-08-25)
+
+
+### Bug Fixes
+
+* adding log from meraki ([093f113](https://github.com/esmartit/access-point-incoming-endpoint/commit/093f113de58df8b06ad19543f32037838c62a28b))
+
 ## [1.8.2](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.8.1...v1.8.2) (2020-08-24)
 
 
