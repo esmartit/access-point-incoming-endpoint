@@ -4,7 +4,6 @@ import com.esmarit.accesspointincomingendpoint.http.request.Data
 import com.esmarit.accesspointincomingendpoint.http.request.Location
 import com.esmarit.accesspointincomingendpoint.http.request.MerakiPayload
 import com.esmarit.accesspointincomingendpoint.http.request.Observation
-import com.esmarit.accesspointincomingendpoint.producer.CountryLocation
 import com.esmarit.accesspointincomingendpoint.producer.DeviceLocation
 import com.esmarit.accesspointincomingendpoint.producer.DeviceSeen
 import com.esmarit.accesspointincomingendpoint.producer.DeviceSeenEvent
@@ -51,33 +50,15 @@ class MerakiEndpoint(private val producer: EventProducer) {
 
     private fun mapToDeviceSeenEvents(incomingData: Data): List<DeviceSeenEvent> {
 
-        val tags = incomingData.apTags.filter { it.isNotBlank() }
-            .map { it.split(":") }
-            .map { it[0] to it[1] }
-            .toMap()
-        val groupName = tags["groupname"] as String
-        val hotSpot = tags["hotspot"] as String
-        val sensorName = tags["sensorname"] as String
-        val spotId = tags["spot_id"] as String
         val apMac = incomingData.apMac
         val apFloors = incomingData.apFloors
-
-        val countryId = tags["t_country"] as String
-        val stateId = tags["t_state"] as String
-        val cityId = tags["t_city"] as String
-        val zipCode = tags["t_zipcode"] as String
 
         return incomingData.observations.map { it.toDeviceSeen() }
             .map {
                 DeviceSeenEvent(
                     apMac = apMac,
-                    groupName = groupName,
-                    hotSpot = hotSpot,
-                    sensorName = sensorName,
-                    spotId = spotId,
                     device = it,
-                    apFloors = apFloors,
-                    countryLocation = CountryLocation(countryId, stateId, cityId, zipCode)
+                    apFloors = apFloors
                 )
             }
     }

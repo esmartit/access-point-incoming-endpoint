@@ -2,13 +2,8 @@ package com.esmarit.accesspointincomingendpoint.producer
 
 data class DeviceSeenEvent(
     val apMac: String,
-    val groupName: String,
-    val hotSpot: String,
-    val sensorName: String,
-    val spotId: String,
     val device: DeviceSeen,
-    val apFloors: List<String?>,
-    val countryLocation: CountryLocation? = null
+    val apFloors: List<String?>
 )
 
 data class DeviceSeen(
@@ -31,5 +26,3 @@ data class DeviceLocation(
     val x: List<String?>,
     val y: List<String?>
 )
-
-data class CountryLocation(val countryId: String, val stateId: String, val cityId: String, val zipCode: String = "")
