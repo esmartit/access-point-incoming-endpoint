@@ -10,7 +10,7 @@ image:
 
 imagePullSecrets: []
 nameOverride: ""
-fullnameOverride: ""
+fullnameOverride: "access-point"
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -32,7 +32,7 @@ securityContext: {}
 
 app:
   kafka:
-    host: "event-bus-kafka:9092"
+    host: "event-bus-kafka.dev-env.svc.cluster.local:9092"
   meraki:
     secret: "adada123456789"
 
@@ -49,10 +49,13 @@ ingress:
     ingress.kubernetes.io/force-ssl-redirect: "true"
     certmanager.k8s.io/cluster-issuer: letsencrypt-prod
     kubernetes.io/tls-acme: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
   hosts:
     - host: tech.cluster.smartpoke.es
       paths:
-        - /test-ap(/|$)(.*)
+        - /dev-env-ap(/|$)(.*)
   tls:
     - hosts:
         - tech.cluster.smartpoke.es

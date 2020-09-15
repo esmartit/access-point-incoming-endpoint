@@ -36,9 +36,6 @@ class MerakiEndpoint(private val producer: EventProducer) {
     @PostMapping(value = ["/devices"])
     fun sendMessageToKafkaTopic(@RequestBody payload: Mono<MerakiPayload>): Mono<ResponseEntity<String>> {
         return payload
-            .doOnNext {
-                logger.info("received payload: $it")
-            }
             .map { it.data }
             .flatMapIterable { mapToDeviceSeenEvents(it) }
             .parallel()
