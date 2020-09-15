@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [2.0.2](https://github.com/esmartit/access-point-incoming-endpoint/compare/v2.0.1...v2.0.2) (2020-09-15)
+
+
+### Bug Fixes
+
+* yaml props ([3797f0d](https://github.com/esmartit/access-point-incoming-endpoint/commit/3797f0d15f0222739918b7cf1de0f2d9ebe0912d))
+
 ## [2.0.1](https://github.com/esmartit/access-point-incoming-endpoint/compare/v2.0.0...v2.0.1) (2020-09-15)
 
 
