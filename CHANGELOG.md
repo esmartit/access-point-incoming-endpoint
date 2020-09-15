@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [2.0.1](https://github.com/esmartit/access-point-incoming-endpoint/compare/v2.0.0...v2.0.1) (2020-09-15)
+
+
+### Bug Fixes
+
+* file size upload ([f2c2760](https://github.com/esmartit/access-point-incoming-endpoint/commit/f2c27602387046d419de813ea6a1446aa4900773))
+
 # [2.0.0](https://github.com/esmartit/access-point-incoming-endpoint/compare/v1.8.3...v2.0.0) (2020-09-14)
 
 
