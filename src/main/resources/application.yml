@@ -14,11 +14,11 @@ spring:
             acks: "all"
             retries: 3
             enable.idempotence: "true"
-        bindings:
-          output:
-            destination: "smartpoke-device-presence"
-          sensor-settings-output:
-            destination: "smartpoke-sensor-settings"
+      bindings:
+        output:
+          destination: "smartpoke-device-presence"
+        sensor-settings-output:
+          destination: "smartpoke-sensor-settings"
 
 
 app.meraki.secret: "${MERAKI_SECRET:abcd}"
