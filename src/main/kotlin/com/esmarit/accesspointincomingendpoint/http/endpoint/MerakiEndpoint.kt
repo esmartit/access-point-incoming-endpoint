@@ -38,10 +38,7 @@ class MerakiEndpoint(private val producer: EventProducer) {
         return payload
             .map { it.data }
             .flatMapIterable { mapToDeviceSeenEvents(it) }
-            .parallel()
-            .runOn(Schedulers.parallel())
             .doOnNext { producer.process(it) }
-            .sequential()
             .reduce(ResponseEntity.accepted().build(), { t, _ -> t })
     }
 
