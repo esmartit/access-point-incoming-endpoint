@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [2.0.4](https://github.com/esmartit/access-point-incoming-endpoint/compare/v2.0.3...v2.0.4) (2020-09-21)
+
+
+### Bug Fixes
+
+* file upload limit 100mb ([fcdc93b](https://github.com/esmartit/access-point-incoming-endpoint/commit/fcdc93bf91616bbfa9664586ea3e2a8d35c5a2e6))
+
 ## [2.0.3](https://github.com/esmartit/access-point-incoming-endpoint/compare/v2.0.2...v2.0.3) (2020-09-18)
 
 
