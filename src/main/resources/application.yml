@@ -2,7 +2,7 @@ server.port: 9000
 
 spring:
   codec:
-    max-in-memory-size: 10MB
+    max-in-memory-size: 100MB
   cloud:
     stream:
       kafka:

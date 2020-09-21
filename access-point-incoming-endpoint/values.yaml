@@ -2,7 +2,7 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-replicaCount: 2
+replicaCount: 8
 
 image:
   repository: esmartit/access-point-incoming-endpoint
@@ -32,7 +32,7 @@ securityContext: {}
 
 app:
   kafka:
-    host: "event-bus-kafka.ibacapital.svc.cluster.local:9092"
+    host: "event-bus-kafka.dev-env.svc.cluster.local:9092"
   meraki:
     secret: "adada123456789"
 
@@ -43,7 +43,7 @@ service:
 
 ingress:
   enabled: true
-  hostname: ibacapital-ap.cluster.smartpoke.es
+  hostname: devenvap.cluster.smartpoke.es
   annotations:
     kubernetes.io/ingress.class: nginx
     ingress.kubernetes.io/force-ssl-redirect: "true"
@@ -53,13 +53,13 @@ ingress:
     nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
     kubernetes.io/tls-acme: "true"
   hosts:
-    - host: ibacapital-ap.cluster.smartpoke.es
+    - host: devenvap.cluster.smartpoke.es
       paths:
         - /
   tls:
     - hosts:
-        - ibacapital-ap.cluster.smartpoke.es
-      secretName: ibacapital-ap-cluster-smartpoke-tls
+        - devenvap.cluster.smartpoke.es
+      secretName: devenv-ap-cluster-smartpoke-tls
 
 #resources:
 #   limits:
