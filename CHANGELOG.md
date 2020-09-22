@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [2.1.0](https://github.com/esmartit/access-point-incoming-endpoint/compare/v2.0.4...v2.1.0) (2020-09-22)
+
+
+### Features
+
+* upload files ([3076097](https://github.com/esmartit/access-point-incoming-endpoint/commit/3076097639ce5c3fd5ae83f5961c85c1efb93daf))
+
 ## [2.0.4](https://github.com/esmartit/access-point-incoming-endpoint/compare/v2.0.3...v2.0.4) (2020-09-21)
 
 
