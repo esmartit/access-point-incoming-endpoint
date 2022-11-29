@@ -3,13 +3,13 @@ kind: Pod
 metadata:
   name: "{{ include "access-point-incoming-endpoint.fullname" . }}-test-connection"
   labels:
-{{ include "access-point-incoming-endpoint.labels" . | nindent 4 }}
+    {{- include "access-point-incoming-endpoint.labels" . | nindent 4 }}
   annotations:
-    "helm.sh/hook": test-success
+    "helm.sh/hook": test
 spec:
   containers:
     - name: wget
       image: busybox
       command: ['wget']
-      args:  ['{{ include "access-point-incoming-endpoint.fullname" . }}:{{ .Values.service.port }}']
+      args: ['{{ include "access-point-incoming-endpoint.fullname" . }}:{{ .Values.service.port }}']
   restartPolicy: Never
