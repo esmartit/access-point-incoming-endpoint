@@ -7,6 +7,8 @@ replicaCount: 1
 image:
   repository: esmartit/access-point-incoming-endpoint
   pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
 
 imagePullSecrets: []
 nameOverride: ""
@@ -15,9 +17,16 @@ fullnameOverride: "access-point"
 serviceAccount:
   # Specifies whether a service account should be created
   create: true
+  # Annotations to add to the service account
+  annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name:
+  name: ""
+
+podAnnotations:
+  prometheus.io/scrape: "true"
+  prometheus.io/path: /actuator/prometheus
+  prometheus.io/port: "9000"
 
 podSecurityContext: {}
 # fsGroup: 2000
@@ -43,11 +52,11 @@ service:
 
 ingress:
   enabled: true
-  hostname: esmartit-ap.cluster.smartpoke.es
+  className: "nginx"
   annotations:
-    kubernetes.io/ingress.class: nginx
+    #    kubernetes.io/ingress.class: "nginx"
     ingress.kubernetes.io/force-ssl-redirect: "true"
-    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
@@ -55,16 +64,34 @@ ingress:
   hosts:
     - host: esmartit-ap.cluster.smartpoke.es
       paths:
-        - /
+        - path: /
+          pathType: ImplementationSpecific
   tls:
-    - hosts:
+    - secretName: esmartit-ap-cluster-smartpoke-tls
+      hosts:
         - esmartit-ap.cluster.smartpoke.es
-      secretName: esmartit-ap-cluster-smartpoke-tls
 
 resources:
   requests:
     cpu: 200m
     memory: 640Mi
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
 
 nodeSelector: {}
 
