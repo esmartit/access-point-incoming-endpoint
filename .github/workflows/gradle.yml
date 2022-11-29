@@ -18,7 +18,6 @@ env:
 
 jobs:
   build:
-    #    if: github.actor != 'ci_liccioni'
     runs-on: ubuntu-latest
 
     steps:
