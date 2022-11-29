@@ -1,6 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
+	id("com.github.jmongard.git-semver-plugin") version "0.4.2"
+	id("com.google.cloud.tools.jib") version "3.2.0"
 	id("org.springframework.boot") version "2.3.0.RELEASE"
 	id("io.spring.dependency-management") version "1.0.9.RELEASE"
 	kotlin("jvm") version "1.3.72"
@@ -52,4 +54,9 @@ tasks.withType<KotlinCompile> {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
 		jvmTarget = "1.8"
 	}
+}
+
+jib.to {
+	image = "esmartit/access-point-incoming-endpoint"
+	tags = setOf("latest", project.version.toString())
 }
