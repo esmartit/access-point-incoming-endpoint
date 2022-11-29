@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "com.esmarit"
-version = "0.0.1-SNAPSHOT"
+version = semver.version
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
